@@ -1,4 +1,9 @@
-
+/**
+ * Write a description of class Jobseeker here.
+ *
+ * @author Sherly
+ * @version (18-03-2021)
+ */
 public class Recruiter
 {
     private int id;
@@ -64,5 +69,6 @@ public class Recruiter
     
     public void setLocation(Location location){}
     
-    public void printData(){}
+    public void printData()
+    {System.out.println("Recruiter" + getName());}
 }

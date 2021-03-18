@@ -1,3 +1,9 @@
+/**
+ * Write a description of class Jobseeker here.
+ *
+ * @author Sherly
+ * @version (18-03-2021)
+ */
 public class DatabaseJob
 {
     private String[] listJob;

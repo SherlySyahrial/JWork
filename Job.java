@@ -1,4 +1,9 @@
-
+/**
+ * Write a description of class Jobseeker here.
+ *
+ * @author Sherly
+ * @version (18-03-2021)
+ */
 public class Job
 {
     private int id;

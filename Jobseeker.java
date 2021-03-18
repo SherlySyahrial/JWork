@@ -1,8 +1,8 @@
 /**
  * Write a description of class Jobseeker here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Sherly
+ * @version (18-03-2021)
  */
 public class Jobseeker
 {
@@ -72,5 +72,5 @@ public class Jobseeker
     }
     
     public void printData()
-    {}
+    {System.out.println("Jobseeker" + getName());}
 }

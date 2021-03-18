@@ -1,5 +1,6 @@
 #BlueJ class context
 comment0.target=Invoice
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Jobseeker\ here.\r\n\r\n\ @author\ Sherly\r\n\ @version\ (18-03-2021)\r\n
 comment1.params=id\ idJob\ totalFee\ date\ jobseeker
 comment1.target=Invoice(int,\ int,\ int,\ java.lang.String,\ Jobseeker)
 comment10.params=totalFee

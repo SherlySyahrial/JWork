@@ -1,3 +1,9 @@
+/**
+ * Write a description of class Jobseeker here.
+ *
+ * @author Sherly
+ * @version (18-03-2021)
+ */
 public class Location
 {
     private String province;
@@ -33,6 +39,6 @@ public class Location
         this.description=description; 
     }
     public void printData() {
-        System.out.println("  ");
+        System.out.println("Provinsi" + getProvince());
     }
 }
