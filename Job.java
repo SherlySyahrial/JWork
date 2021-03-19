@@ -1,5 +1,4 @@
 /**
- * Write a description of class Jobseeker here.
  *
  * @author Sherly
  * @version (18-03-2021)
@@ -72,5 +71,12 @@ public class Job
         this.recruiter = recruiter;
     }
     
-    public void printData(){}
+    public void printData(){
+    System.out.println("=== Job ===\n" +
+            "ID: " + id +
+            "\nName: " + name +
+            "\nRecruiter: " + recruiter.getName() +
+            "\nFee: " + fee +
+            "\nCategory: " + category);
+}
 }
