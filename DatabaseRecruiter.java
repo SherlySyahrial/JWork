@@ -26,7 +26,7 @@ public class DatabaseRecruiter
         return null;
     }
     
-    public String[] getListRecruiter(){
+    public String[] ListRecruiter(){
         return null;
     }
     

@@ -12,5 +12,5 @@ comment4.target=Recruiter\ getRecruiter()
 comment5.params=
 comment5.target=Recruiter\ setRecruiter()
 comment6.params=
-comment6.target=java.lang.String[]\ getListRecruiter()
+comment6.target=java.lang.String[]\ ListRecruiter()
 numComments=7
