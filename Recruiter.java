@@ -1,7 +1,7 @@
 /**
  *
  * @author Sherly
- * @version (18-03-2021)
+ * @version (25-03-2021)
  */
 public class Recruiter
 {
@@ -33,6 +33,11 @@ public class Recruiter
     public String getPhoneNumber(){
         return this.phoneNumber;
     }
+    
+    public Location getLocation(){
+        return this.location;
+    }
+    
     public void setId(int id){
          this.id = id;
     }
@@ -45,6 +50,11 @@ public class Recruiter
     public void setPhoneNumber(String PhoneNumber){
         this.phoneNumber= phoneNumber;
     }
+    
+    public void setLocation(Location location){
+        this.location = location;
+    }
+    
     public void printData(){
         System.out.println("Nama Perekrut: " + getName());
     }

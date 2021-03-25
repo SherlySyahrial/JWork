@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=Job
-comment0.text=\r\n\r\n\ @author\ Sherly\r\n\ @version\ (18-03-2021)\r\n
+comment0.text=\r\n\r\n\ @author\ Sherly\r\n\ @version\ (25-03-2021)\r\n
 comment1.params=id\ fee\ name\ category\ recruiter
-comment1.target=Job(int,\ int,\ java.lang.String,\ java.lang.String,\ Recruiter)
+comment1.target=Job(int,\ int,\ java.lang.String,\ JobCategory,\ Recruiter)
 comment10.params=Fee
 comment10.target=void\ setFee(int)
 comment11.params=recruiter
@@ -16,7 +16,7 @@ comment3.target=int\ getFee()
 comment4.params=
 comment4.target=java.lang.String\ getName()
 comment5.params=
-comment5.target=java.lang.String\ getCategory()
+comment5.target=JobCategory\ getCategory()
 comment6.params=
 comment6.target=Recruiter\ getRecruiter()
 comment7.params=id
@@ -24,5 +24,5 @@ comment7.target=void\ setId(int)
 comment8.params=name
 comment8.target=void\ setName(java.lang.String)
 comment9.params=category
-comment9.target=void\ setCategory(java.lang.String)
+comment9.target=void\ setCategory(JobCategory)
 numComments=13

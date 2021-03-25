@@ -1,28 +1,25 @@
 /**
  *
  * @author Sherly
- * @version (18-03-2021)
+ * @version (25-03-2021)
  */
 public class DatabaseJob
 {
-    private String[] listJob;
-
-    public DatabaseJob()
-    {}
+    private static String[] listJob;
     
-    public boolean addJob(Job job){
+    public static boolean addJob(Job job){
         return false;
     }
     
-    public boolean removeJob(Job job){
+    public static boolean removeJob(Job job){
         return false;
     }
     
-    public Job getJob(){
+    public static Job getJob(){
         return null;
     }
     
-    public String[] getListJob(){
+    public static String[] getListJob(){
         return null;
     }
 }

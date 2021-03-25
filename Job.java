@@ -1,18 +1,17 @@
 /**
  *
  * @author Sherly
- * @version (18-03-2021)
+ * @version (25-03-2021)
  */
 public class Job
 {
     private int id;
     private int fee;
     private String name;
-    private String category;
+    private JobCategory category;
+    private Recruiter recruiter;
     
-    public Recruiter recruiter;
-    
-    public Job(int id, int fee, String name, String category, Recruiter recruiter)
+    public Job(int id, int fee, String name, JobCategory category, Recruiter recruiter)
     {
         this.id = id;
         this.fee = fee;
@@ -36,7 +35,7 @@ public class Job
         return this.name;
     }
 
-    public String getCategory()
+    public JobCategory getCategory()
     {
         return this.category;
     }
@@ -56,7 +55,7 @@ public class Job
         this.name = name;
     }
     
-    public void setCategory(String category)
+    public void setCategory(JobCategory category)
     {
         this.category = category;
     }
@@ -72,11 +71,12 @@ public class Job
     }
     
     public void printData(){
-    System.out.println("=== Job ===\n" +
+    System.out.println("=== JOB ===\n" +
             "ID: " + id +
             "\nName: " + name +
             "\nRecruiter: " + recruiter.getName() +
+            "\nCity: " + recruiter.getLocation().getCity() +
             "\nFee: " + fee +
-            "\nCategory: " + category);
+            "\nCategory: " + category.toString());
 }
 }
