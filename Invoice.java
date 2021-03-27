@@ -13,7 +13,7 @@ public class Invoice
     private PaymentType paymentType;
     private InvoiceStatus status;
     
-    public Invoice(int id, int idJob, String date, int totalFee, Jobseeker jobseeker, int totalPrice, InvoiceStatus status){
+    public Invoice(int id, int idJob, String date, int totalFee, Jobseeker jobseeker, PaymentType paymentType, InvoiceStatus status){
         this.id = id;
         this.idJob = idJob;
         this.date = date;
@@ -74,12 +74,12 @@ public class Invoice
     }
      public void printData()
     {
-        System.out.println("\n====INVOICE====" +
-            "\nID: " + id +
-            "\nIDJob: " + idJob +
-            "\nDate: " + date +
-            "\nSeeker: " +  jobseeker.getName() +
-            "\nFee: " + totalFee +
-            "\nStatus: " + status.toString());
+        System.out.println("\n====INVOICE====");
+        System.out.println("ID :" + getId());
+        System.out.println("ID Job :" + getIdJob());
+        System.out.println("Date :" + getDate());
+        System.out.println("Seeker :" + jobseeker.getName());
+        System.out.println("Fee :" + getTotalFee());
+        System.out.println("Status :" + getInvoiceStatus());
     }
 }
