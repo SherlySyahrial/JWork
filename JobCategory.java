@@ -13,7 +13,7 @@ public enum JobCategory
     UX("UX"),
     Devops("Devops"),
     DataScientist("Data Scientist"),
-    DataAnalyst("Data Analyst"),;
+    DataAnalyst("Data Analyst");
     
     private String name;
     

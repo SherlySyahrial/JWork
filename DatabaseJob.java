@@ -20,7 +20,7 @@ public class DatabaseJob
     }
     
     public static String[] getListJob(){
-        return null;
+        return listJob;
     }
 }
 

@@ -9,15 +9,15 @@ public enum PaymentType
     BankPayment("Bank Payment"),
     EwalletPayment("E-wallet Payment"),;
     
-    private String name;
+    private String type;
     
-    private PaymentType(String name)
+    private PaymentType(String type)
     {
-        this.name = name;
+        this.type = type;
     }
     
     public String toString()
     {
-        return name;
+        return type;
     }
 }

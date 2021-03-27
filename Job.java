@@ -5,12 +5,23 @@
  */
 public class Job
 {
-    private int id;
-    private int fee;
-    private String name;
-    private JobCategory category;
-    private Recruiter recruiter;
+    /**
+     deklarasi variabel
+    */
+    private int id; //deklarasi variabel int
+    private int fee; //deklarasi variabel int
+    private String name;//deklarasi variabel String
+    public Recruiter recruiter;
+    public JobCategory category;
     
+    /**
+     * constructor dari job
+     * @param id dari job
+     * @param nama dari job
+     * @param perekrut dari recruiter
+     * @param fee dari job
+     * @param kategori dari job
+     */
     public Job(int id, int fee, String name, JobCategory category, Recruiter recruiter)
     {
         this.id = id;
@@ -20,63 +31,107 @@ public class Job
         this.recruiter = recruiter;
     }
     
-    public int getId()
+    /**
+    * getter id dari jobseeker
+    * @return id dari jobseeker
+    */
+   public int getId()
     {
-        return this.id;
+        return id;
     }
 
-    public int getFee()
+    /**
+    * getter fee jobseeker
+    * @return fee jobseeker
+    */
+   public int getFee()
     {
-        return this.fee;
+        return fee;
     }
     
-    public String getName()
+    /**
+    * getter nama jobseeker
+    * @return name jobseeker
+    */
+   public String getName()
     {
-        return this.name;
+        return name;
     }
 
-    public JobCategory getCategory()
+    /**
+    * getter kategori jobseeker
+    * @return category jobseeker
+    */
+   public JobCategory getCategory()
     {
-        return this.category;
+        return category;
     }
     
-    public Recruiter getRecruiter()
+    /**
+    * setter rekruiter dari recruiter
+    * @param recruiter dari recruiter
+    */
+   public Recruiter getRecruiter()
     {
-        return this.recruiter;
+        return recruiter;
     }
     
-    public void setId(int id)
+    /**
+    * setter id invoice
+    * @param id invoice
+    */    
+   public void setId(int id)
     {
         this.id = id;
     }
     
-    public void setName(String name)
+    /**
+    * setter nama invoice
+    * @param name invoice
+    */
+   public void setName(String name)
     {
         this.name = name;
     }
     
-    public void setCategory(JobCategory category)
+    /**
+    * setter kategori invoice
+    * @param category invoice
+    */
+   public void setCategory(JobCategory category)
     {
         this.category = category;
     }
     
-    public void setFee(int Fee)
+    /**
+    * setter fee invoice
+    * @param fee invoice
+    */
+   public void setFee(int fee)
     {
         this.fee = fee;
     }
     
-    public void setRecruiter(Recruiter recruiter)
+    /**
+    * setter rekruiter invoice
+    * @param recruiter invoice
+    */
+   public void setRecruiter(Recruiter recruiter)
     {
         this.recruiter = recruiter;
     }
     
-    public void printData(){
-    System.out.println("=== JOB ===\n" +
-            "ID: " + id +
+    /**
+     * Menampilkan nama pekerjaan
+     */
+    public void printData()
+    {
+        System.out.println("\n====JOB====" +
+            "\nID: " + id +
             "\nName: " + name +
             "\nRecruiter: " + recruiter.getName() +
-            "\nCity: " + recruiter.getLocation().getCity() +
+            "\nCity: " +  recruiter.getLocation().getCity() +
             "\nFee: " + fee +
             "\nCategory: " + category.toString());
-}
+    }
 }

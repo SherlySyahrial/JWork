@@ -1,7 +1,7 @@
 /**
  *
  * @author Sherly
- * @version (18-03-2021)
+ * @version (27-03-2021)
  */
 public class Invoice
 {
@@ -10,34 +10,46 @@ public class Invoice
     private String date;
     private int totalFee;
     private Jobseeker jobseeker;
+    private PaymentType paymentType;
+    private InvoiceStatus status;
     
-    public Invoice(int id, int idJob, String date, int totalFee, Jobseeker jobseeker){
+    public Invoice(int id, int idJob, String date, int totalFee, Jobseeker jobseeker, int totalPrice, InvoiceStatus status){
         this.id = id;
         this.idJob = idJob;
         this.date = date;
         this.totalFee = totalFee;
         this.jobseeker = jobseeker; 
+        this.paymentType = paymentType;
+        this.status = status;
     }
     
     public int getId(){
-        return this.id;
+        return id;
     }
     
     public int getIdJob(){
-        return this.idJob;
+        return idJob;
     }
     
     public String getDate(){
-        return this.date;
+        return date;
     }
     
     public int getTotalFee(){
-        return this.totalFee;
+        return totalFee;
     }
     
     public Jobseeker getJobseeker(){
-        return this.jobseeker;
+        return jobseeker;
     }   
+    
+    public PaymentType getpaymentType(){
+        return paymentType;
+    }
+    
+    public InvoiceStatus getInvoiceStatus(){
+        return status;
+    }
     
     public void setId(int id){
         this.id = id;
@@ -51,6 +63,23 @@ public class Invoice
     public void setTotalFee(int totalFee){
         this.totalFee = totalFee;
     }
-    public void printData(){
+    public void setJobseeker(Jobseeker jobseeker){
+        this.jobseeker = jobseeker;
+    }
+    public void setPaymentType(PaymentType paymentType){
+        this.paymentType = paymentType;
+    }
+    public void setInvoiceStatus(InvoiceStatus status){
+        this.status = status;
+    }
+     public void printData()
+    {
+        System.out.println("\n====INVOICE====" +
+            "\nID: " + id +
+            "\nIDJob: " + idJob +
+            "\nDate: " + date +
+            "\nSeeker: " +  jobseeker.getName() +
+            "\nFee: " + totalFee +
+            "\nStatus: " + status.toString());
     }
 }

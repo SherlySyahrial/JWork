@@ -1,7 +1,7 @@
 /**
  *
  * @author Sherly
- * @version (18-03-2021)
+ * @version (25-03-2021)
  */
 public class Jobseeker
 {
@@ -22,27 +22,27 @@ public class Jobseeker
     
     public int getId()
     {
-        return this.id;
+        return id;
     }
   
     public String getName()
     {
-        return this.name;
+        return name;
     }
 
     public String getEmail()
     {
-        return this.email;
+        return email;
     }
 
     public String getPassword()
     {
-        return this.password;
+        return password;
     }
 
     public String getJoinDate()
     {
-        return this.joinDate;
+        return joinDate;
     }
 
     public void setId(int id)

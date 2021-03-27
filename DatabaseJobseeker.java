@@ -1,26 +1,54 @@
 /**
  *
  * @author Sherly
- * @version (25-03-2021)
+ * @version (18-03-2021)
  */
 public class DatabaseJobseeker
 {
-    private static String[] listJobseeker;
+    /**
+     * deklarasi variabel
+     */
+   private String[] listJobseeker;
+   
+   /**
+     * constructor dari DatabaseJobseeker
+     */
     
-    public static boolean addJobseeker(Jobseeker Jobseeker){
-        return false;
-    }
+   public DatabaseJobseeker()
+   {}
+   
+   /**
+     * metode addJobseeker dari DatabaseJobseeker
+     * @return false
+     */
+   public static boolean addJobseeker(Jobseeker jobseeker)
+   {
+       return false;
+   }
+   
+   /**
+     * metode removeJobseeker dari DatabaseJobseeker
+     * @return false
+     */
+   public boolean removeJobseeker(Jobseeker jobseeker)
+   {
+       return false;
+   }
     
-    public static boolean removeJobseeker(Jobseeker Jobseeker){
-        return false;
-    }
-    
-    public static Jobseeker getJobseeker(){
-        return null;
-    }
-    
-    public static String[] getListJobseeker(){
-        return listJobseeker;
-    }
+   /**
+     * getter jobseeker dari DatabaseJobseeker
+     * @return null
+     */
+   public Jobseeker getJobseeker()
+   {
+       return null;
+   }
+   
+   /**
+     * getter getListJobseeker dari DatabaseJobseeker
+     * @return listJobseeker
+     */
+   public String[] getListJobseeker(){
+       return listJobseeker;
+   }
 }
-

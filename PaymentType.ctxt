@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=PaymentType
 comment0.text=\r\n\r\n\ @author\ Sherly\r\n\ @version\ (25-03-2021)\r\n
-comment1.params=name
+comment1.params=type
 comment1.target=PaymentType(java.lang.String)
 comment2.params=
 comment2.target=java.lang.String\ toString()
