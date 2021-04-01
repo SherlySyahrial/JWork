@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=DatabaseBonus
+comment0.text=\r\n\r\n\ @author\ Sherly\r\n\ @version\ (01-04-2021)\r\n
+comment1.params=
+comment1.target=DatabaseBonus()
+comment1.text=\r\n\ constructor\ dari\ DatabaseBonus\r\n
+comment2.params=Bonus
+comment2.target=boolean\ addBonus(Bonus)
+comment2.text=\r\n\ metode\ addBonus\ dari\ DatabaseBonus\r\n\ @return\ false\r\n
+comment3.params=Bonus
+comment3.target=boolean\ removeBonus(Bonus)
+comment3.text=\r\n\ metode\ removeBonus\ dari\ DatabaseBonus\r\n\ @return\ false\r\n
+comment4.params=
+comment4.target=Bonus\ getBonus()
+comment4.text=\r\n\ getter\ Bonus\ dari\ DatabaseBonus\r\n\ @return\ null\r\n
+comment5.params=
+comment5.target=java.lang.String[]\ getListBonus()
+comment5.text=\r\n\ getter\ getListBonus\ dari\ DatabaseBonus\r\n\ @return\ listBonus\r\n
+numComments=6
