@@ -3,26 +3,27 @@
  * @author Sherly
  * @version (03-04-2021)
  */
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
 public class Jwork{
     
     public static void main (String[] args){
-        Location location = new Location("DKI Jakarta", "Jakarta", "Ibu Kota");
-        Recruiter recruite = new Recruiter(1, "Sherly", "sherly82@ui.ac.id", "0895637478937", location);
-        Job job = new Job(1, 10000000, "Software Engineer", JobCategory.UI, recruite);
-        Jobseeker jobseeker = new Jobseeker(1, "Digo", "Digo@gmail.com", "adadeh", "20 Maret 2021");
-        AdminFee adminFee1 = new AdminFee(0, null, 10000, 20000, true);
-        AdminFee adminFee2 = new AdminFee(0, "1234", 10000, 200000000, true);
-        AdminFee adminFee3 = new AdminFee(0, "1234", 10000, 20000, true);
-        PaymentType pay = PaymentType.BankPayment;
-        BankPayment BP1 = new BankPayment(0, job, "01 April 2021", jobseeker, adminFee1, InvoiceStatus.OnGoing);
-        BankPayment BP2 = new BankPayment(0, job, "01 April 2021", jobseeker, adminFee2, InvoiceStatus.OnGoing);
-        BankPayment BP3 = new BankPayment(0, job, "01 April 2021", jobseeker, adminFee3, InvoiceStatus.OnGoing);
-        BP1.setTotalFee();
-        BP2.setTotalFee();
-        BP3.setTotalFee();
-        BP1.printData();
-        BP2.printData();
-        BP3.printData();
+        Calendar cal = new GregorianCalendar(2021, 4, 8);
+
+        ArrayList<Jobseeker> arrJS = new ArrayList<Jobseeker>();
+        arrJS.add(new Jobseeker(1, "Yogie", ".yogie.wisesa@ui.ac.id", "admin1234", cal));
+        arrJS.add(new Jobseeker(1, "Sherly", "sherly@gmail.com", "mantapJiWa", 2021, 1, 1));
+        arrJS.add(new Jobseeker(1, "Ailsa", "ailsa.sy@ui.ac.id", "aaaIIIIssHHAA"));
+
+        arrJS.forEach((js) -> { System.out.println(js.toString()); });
+
+        Jobseeker jsChange = arrJS.get(0);
+        jsChange.setEmail("yogie.wisesa@gmail.com");
+        jsChange.setPassword("123@#PaSs");
+        System.out.println(jsChange.toString());
 
     }
 }

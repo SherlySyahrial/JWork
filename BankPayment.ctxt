@@ -1,10 +1,10 @@
 #BlueJ class context
 comment0.target=BankPayment
 comment0.text=\r\n\r\n\ @author\ Sherly\r\n\ @version\ (01-04-2021)\r\n
-comment1.params=id\ job\ date\ totalFee\ jobseeker\ invoiceStatus
-comment1.target=BankPayment(int,\ Job,\ java.lang.String,\ int,\ Jobseeker,\ InvoiceStatus)
-comment2.params=id\ job\ date\ totalFee\ jobseeker\ adminFee\ invoiceStatus
-comment2.target=BankPayment(int,\ Job,\ java.lang.String,\ int,\ Jobseeker,\ int,\ InvoiceStatus)
+comment1.params=id\ job\ date\ jobseeker\ invoiceStatus
+comment1.target=BankPayment(int,\ Job,\ java.lang.String,\ Jobseeker,\ InvoiceStatus)
+comment2.params=id\ job\ date\ jobseeker\ invoiceStatus\ adminFee
+comment2.target=BankPayment(int,\ Job,\ java.lang.String,\ Jobseeker,\ InvoiceStatus,\ int)
 comment3.params=
 comment3.target=PaymentType\ getPaymentType()
 comment4.params=

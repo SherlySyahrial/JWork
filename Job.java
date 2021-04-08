@@ -124,14 +124,12 @@ public class Job
     /**
      * Menampilkan nama pekerjaan
      */
-    public void printData()
-    {
-        System.out.println("\n====JOB====" +
-            "\nID: " + id +
-            "\nName: " + name +
-            "\nRecruiter: " + recruiter.getName() +
-            "\nCity: " +  recruiter.getLocation().getCity() +
-            "\nFee: " + fee +
-            "\nCategory: " + category.toString());
+     public String toString(){ 
+        return "====Job===="+
+               "\nId = " + id +
+                "\nName = " + name +
+                "\nRecruiter = " + recruiter.getName() +
+                "\nCity= " + recruiter.getLocation().getCity() +
+                "\nCategory = " + category.toString();
     }
 }

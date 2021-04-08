@@ -120,17 +120,17 @@ public class Recruiter
     {
         this.location = location;
     }
+
     
     /**
      * menampilkan nama perekrut dari recruiter
      */
-    public void printData()
-    {
-        System.out.println("\n====Recruiter====" +
-            "\nID: " + id +
-            "\nPerekrut: " + name +
-            "\nEmail: " + email +
-            "\nNomor Telepon: " + phoneNumber +
-            "\nLokasi: " + location);
+   public String toString(){ 
+        return "====Recruiter===="+
+               "\nId = " + id +
+                "\nName = " + name +
+                "\nPhoneNumber = " + phoneNumber +
+                "\nLocation = " + location.getCity();
+
     }
 }

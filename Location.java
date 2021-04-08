@@ -82,11 +82,11 @@ public class Location
     /**
      * menampilkan nama provinsi dari location
      */
-    public void printData()
-    {
-        System.out.println("\n====Location====" +
-            "\nProvinsi: " + province +
-            "\nKota: " + city +
-            "\nDeskripsi: " + description);
+     public String toString(){ 
+        return "====Location===="+
+               "\nProvince = " + province +
+                "\nCity= " + city +
+                "\nDescription = " + description;
+
     }
 }
