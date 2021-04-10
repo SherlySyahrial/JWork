@@ -22,8 +22,8 @@ public class Jobseeker
     {
         this.id = id;
         this.name = name;
-        this.setEmail(email);
-        this.setPassword(password);
+        setEmail(email);
+        setPassword(password);
         this.joinDate = joinDate;
     }
     
@@ -32,8 +32,8 @@ public class Jobseeker
     {
         this.id = id;
         this.name = name;
-        this.setEmail(email);
-        this.setPassword(password);
+        setEmail(email);
+        setPassword(password);
         this.setJoinDate(year,month,dayOfMonth);
     }
     
@@ -42,8 +42,8 @@ public class Jobseeker
     {
         this.id = id;
         this.name = name;
-        this.setEmail(email);
-        this.setPassword(password);
+        setEmail(email);
+        setPassword(password);
         this.joinDate = new GregorianCalendar();
     }
     
@@ -131,7 +131,7 @@ public class Jobseeker
      */
     public void setJoinDate(int year, int month, int dayOfMonth)
     {
-        this.joinDate = new GregorianCalendar(year,month,dayOfMonth);
+        this.joinDate = new GregorianCalendar(year,month-1,dayOfMonth);
     }
     
     public String toString(){

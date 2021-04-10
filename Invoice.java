@@ -1,148 +1,168 @@
 /**
  *
  * @author Sherly
- * @version (01-04-2021)
+ * @version (10-04-2021)
  */
+
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.text.SimpleDateFormat;
+
 public abstract class Invoice
 {
     /**
-    Deklarasi Variable 
+     deklarasi variabel
     */
-    private int id;
-    //private int idJob;
-    private Job job;
-    private String date;
-    protected int totalFee;
+    private int id; //deklarasi variabel int
+    //private int idJob; //deklarasi variabel int
+    protected int totalFee; //deklarasi variabel int
+    private Calendar date; //deklarasi variabel String
     private Jobseeker jobseeker;
-    //private PaymentType paymentType;
+   // public PaymentType paymentType;
     private InvoiceStatus invoiceStatus;
+    private Job job;
 
     /**
      * constructor dari invoice
      * @param id dari invoice
-     * @param idJob dari invoice
+     * @param job dari invoice
      * @param date dari invoice
      * @param totalfee dari invoice
-     * @param jobseeker dari jobseeker
+     * @param jobseeker dari invoice
+     * @param paymentType dari invoice
+     * @param status dari invoice
      */
-    public Invoice(int id, Job job, String date, Jobseeker jobseeker, InvoiceStatus invoiceStatus) { 
-        this.id = id;
-        this.job = job;
-        this.date = date;  
-        this.jobseeker = jobseeker;
-        this.invoiceStatus = invoiceStatus;
+    public Invoice(int id, Job job, Jobseeker jobseeker, InvoiceStatus status)
+    {
+       this.id = id;
+       this.job = job;
+       //this.totalFee = totalFee;
+       //this.date = date;
+       this.jobseeker = jobseeker;
+       //this.paymentType = paymentType;
+       this.invoiceStatus = invoiceStatus;
     }
 
     /**
     * getter id dari invoice
     * @return id dari invoice
     */
-    public int getId(){
+   public int getId()
+    {
         return id;
     }
     
     /**
-    * getter idjob dari invoice
-    * @return idjob dari invoice
+    * getter job invoice
+    * @return job invoice
     */
-    public Job getJob(){
+   public Job getJob()
+    {
         return job;
     }
     
     /**
-    * getter date dari invoice
+    * getter tanggal dari invoice
     * @return date dari invoice
     */
-    public String getDate(){
+   public Calendar getDate()
+    {
         return date;
     }
     
     /**
-    * getter totalfee dari invoice
+    * getter jumlah biaya dari invoice
     * @return totalfee dari invoice
     */
-    public int getTotalFee(){
+   public int getTotalFee()
+    {
         return totalFee;
     }
-
-    /**
-    * getter jobseeker dari jobseeker
-    * @return jobseeker dari jobseeker
+    
+   /**
+    * getter tipe pembayaran dari invoice
     */
-    public Jobseeker getJobseeker() { 
-        return jobseeker; 
-    }
+   public abstract PaymentType getPaymentType();
+    
+   /**
+    * getter status dari invoice
+    * @return status dari invoice
+    */
+   public InvoiceStatus getInvoiceStatus()
+    {
+        return invoiceStatus;
+    } 
     
     /**
-    * getter paymentType dari paymentType
-    * @return paymentType dari paymentType
+    * getter jobseeker dari invoice
+    * @return jobseeker dari invoice
     */
-    public abstract PaymentType getPaymentType();
-
-    /**
-    * getter invoiceStatus dari invoiceStatus
-    * @return invoiceStatus dari invoiceStatus
-    */
-    public InvoiceStatus getInvoiceStatus() { 
-        return invoiceStatus; 
+   public Jobseeker getJobseeker()
+    {
+        return jobseeker;
     }
-
-    /**
-    * setter jobseeker dari jobseeker
-    * @param jobseeker dari jobseeker
-    */
-    public void setJobseeker(Jobseeker jobseeker) { 
-        this.jobseeker = jobseeker; 
-    }
-
-    /**
-    * setter invoiceStatus dari invoiceStatus
-    * @param invoiceStatus dari invoiceStatus
-    */
-    public void setInvoiceStatus(InvoiceStatus invoiceStatus) { 
-        this.invoiceStatus = invoiceStatus; 
-    }
-
+    
     /**
     * setter id dari invoice
     * @param id dari invoice
     */
-    public void setId(int id){ 
-        this.id = id; 
+   public void setId(int id)
+    {
+        this.id = id;
     }
     
     /**
-    * setter idjobs dari invoice
-    * @param idjobs dari invoice
+    * setter idjob dari invoice
+    * @param idjob dari invoice
     */
-    public void setJob(Job job){ 
-        this.job = job; 
+   public void setJob(Job job)
+    {
+        this.job = job;
     }
     
     /**
-    * setter date dari invoice
+    * setter tanggal dari invoice
     * @param date dari invoice
     */
-    public void setDate(String date){ 
-        this.date = date; 
+   public void setDate(Calendar date)
+    {
+        this.date = date;
+    }
+    
+   public void setDate(int year, int month, int dayOfMonth)
+    {
+        this.date = new GregorianCalendar(year, month-1, dayOfMonth);
+    }
+    
+   public abstract void setTotalFee();
+       
+    /**
+    * setter jobseeker dari invoice
+    * @param jobseeker dari invoice
+    */
+   public void setJobseeker(Jobseeker jobseeker)
+    {
+        this.jobseeker = jobseeker;
     }
     
     /**
-    * setter totalfee dari invoice
-    * @param totalfee dari invoice
+    * setter tipe pembayaran dari invoice
+    * @param paymentType dari invoice
     */
-    public abstract void setTotalFee();
-    //{ 
-      //  this.totalFee = totalFee; 
-    //}
-     public void printData()
+   //public void setPaymentType(PaymentType paymentType);   
+    
+    /**
+    * setter status dari invoice
+    * @param status dari invoice
+    */
+   public void setInvoiceStatus(InvoiceStatus invoiceStatus)
     {
-        System.out.println("\n====INVOICE====");
-        System.out.println("ID :" + getId());
-        System.out.println("Job :" + getJob());
-        System.out.println("Date :" + getDate());
-        System.out.println("Seeker :" + jobseeker.getName());
-        System.out.println("Fee :" + getTotalFee());
-        System.out.println("Status :" + getInvoiceStatus());
+        this.invoiceStatus = invoiceStatus;
     }
+    
+    /**
+     * Menampilkan jumlah harga
+     */
+    public abstract String toString();
+   
 }

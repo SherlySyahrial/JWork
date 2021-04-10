@@ -1,46 +1,80 @@
 /**
  *
  * @author Sherly
- * @version (01-04-2021)
+ * @version (10-04-2021)
  */
-
 public class EwalletPayment extends Invoice
 {
-    // instance variables - replace the example below with your own
+    /**
+     deklarasi variabel
+    */
     private static final PaymentType PAYMENT_TYPE = PaymentType.EwalletPayment;
     private Bonus bonus;
-
-    /**
-     * Constructor for objects of class EwalletPayment
-     */
-    public EwalletPayment(int id, Job job, String date, Jobseeker jobseeker, InvoiceStatus invoiceStatus)
+        
+    public EwalletPayment(int id, Job job, Jobseeker jobseeker, InvoiceStatus invoiceStatus)
     {
-        super(id, job, date, jobseeker, invoiceStatus);
-    }
-    
-    public EwalletPayment(int id, Job job, String date, Jobseeker jobseeker, Bonus bonus ,InvoiceStatus invoiceStatus)
-    {
-        super(id, job, date, jobseeker, invoiceStatus);
-        this.bonus = bonus;
+        super(id, job, jobseeker,invoiceStatus);
     }
 
-    public PaymentType getPaymentType() { 
-        return PAYMENT_TYPE; 
-    }
-    
-    public void setBonus(Bonus bonus){
+    public EwalletPayment(int id, Job job, Jobseeker jobseeker, Bonus bonus, InvoiceStatus invoiceStatus)
+    {
+        super(id, job, jobseeker,invoiceStatus);
         this.bonus = bonus;
     }
     
-    public void setTotalFee(){
-        totalFee = super.getJob().getFee();
-        if(bonus!=null && bonus.getActive() && totalFee > bonus.getMinTotalFee())
-        totalFee += bonus.getExtraFee();
+    @Override
+    public PaymentType getPaymentType()
+    {
+        return PAYMENT_TYPE;
+    }
+       
+    public Bonus getBonus()
+    {
+        return bonus;
+    }
+        
+    public void setBonus(Bonus bonus)
+    {
+        this.bonus = bonus;
     }
     
-    public void printData() {
-        System.out.println("==================Ewallet Payment==================");
-        System.out.println("paymentType : " + PAYMENT_TYPE);
-        System.out.println("bonus : " + bonus);
+    @Override
+    public void setTotalFee()
+    {
+        if (bonus != null && bonus.getActive() && (super.totalFee > bonus.getMinTotalFee()))
+        {
+            super.totalFee += bonus.getExtraFee();
+        }
+        
+        else
+        {
+            super.totalFee = super.getJob().getFee();
+        }
+    }
+       
+    public String toString()
+    {
+        if (bonus != null && bonus.getActive() && super.totalFee > bonus.getMinTotalFee() && bonus.getReferralCode() != null)
+        {
+            return"\n====Invoice====" +
+            "\nID: " + "ID = "+ super.getId() +
+            "\nJob = "+ super.getJob().getName() +
+            "\nSeeker = "+ super.getJobseeker().getName() +
+            "\nFee = "+ super.totalFee +
+            "\nReferral Code = "+ bonus.getReferralCode() +
+            "\nStatus = "+ super.getInvoiceStatus().toString()+
+            "\nPayment Type = "+ PAYMENT_TYPE.toString();
+        }
+        
+        else
+        {
+           return"\n====Invoice====" +
+            "\nID: " + "ID = "+ super.getId() +
+            "\nJob = "+ super.getJob().getName() +
+            "\nSeeker = "+ super.getJobseeker().getName() +
+            "\nFee = "+ super.totalFee +
+            "\nStatus = "+ super.getInvoiceStatus().toString()+
+            "\nPayment Type = "+ PAYMENT_TYPE.toString(); 
+        }
     }
 }

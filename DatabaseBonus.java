@@ -1,54 +1,47 @@
 /**
  *
  * @author Sherly
- * @version (01-04-2021)
+ * @version (10-04-2021)
  */
 public class DatabaseBonus
 {
     /**
      * deklarasi variabel
      */
-   private String[] listBonus;
-   
+   private static String[] listBonus;
+        
    /**
-     * constructor dari DatabaseBonus
-     */
-    
-   public DatabaseBonus()
-   {}
-   
-   /**
-     * metode addBonus dari DatabaseBonus
+     * metode addRecruiter dari DatabaseRecruiter
      * @return false
      */
-   public static boolean addBonus(Bonus Bonus)
+   public static boolean addBonus(Bonus bonus)
    {
        return false;
    }
    
    /**
-     * metode removeBonus dari DatabaseBonus
+     * metode removeRecruiter dari DatabaseRecruiter
      * @return false
      */
-   public boolean removeBonus(Bonus Bonus)
+   public static boolean removeBonus(Bonus bonus)
    {
        return false;
    }
     
    /**
-     * getter Bonus dari DatabaseBonus
+     * getter job dari databaserecruiter
      * @return null
      */
-   public Bonus getBonus()
+   public static Bonus getBonus()
    {
        return null;
    }
    
    /**
-     * getter getListBonus dari DatabaseBonus
-     * @return listBonus
+     * getter getlisrecruiter dari databaserecruiter
+     * @return null
      */
-   public String[] getListBonus(){
+   public static String[] getListBonus(){
        return listBonus;
    }
 }
