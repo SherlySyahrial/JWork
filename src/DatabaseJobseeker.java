@@ -3,7 +3,7 @@ import java.util.ArrayList;
 /**
  *
  * @author Sherly
- * @version (25-03-2021)
+ * @version (10-04-2021)
  */
 public class DatabaseJobseeker
 {
@@ -27,11 +27,15 @@ public class DatabaseJobseeker
         }
         return null;
     }
-    /
-            * method untuk menambahkan objek database job
+    /* method untuk menambahkan objek database job
      * @return nilai false
-        */
-    public static boolean addJobseeker(Jobseeker jobseeker){
+     */
+    public static boolean addJobseeker(Jobseeker jobseeker) {
+        for (Jobseeker js : JOBSEEKER_DATABASE)
+        {
+            if (js.getId() == jobseeker.getId()) return false;
+            if (js.getEmail() == jobseeker.getEmail()) return false;
+        }
         JOBSEEKER_DATABASE.add(jobseeker);
         lastId = jobseeker.getId();
         return true;

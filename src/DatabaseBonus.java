@@ -3,7 +3,7 @@ import java.util.ArrayList;
 /**
  *
  * @author Sherly
- * @version (25-03-2021)
+ * @version (10-04-2021)
  */
 public class DatabaseBonus
 {
@@ -61,7 +61,7 @@ public class DatabaseBonus
         return true;
     }
 
-    public static boolean activeBonus(int id){
+    public static boolean activateBonus(int id) {
         for (int i = 0; i < BONUS_DATABASE.size(); i++) {
             if (BONUS_DATABASE.get(i).getId() == id) {
                 BONUS_DATABASE.get(i).setActive(true);

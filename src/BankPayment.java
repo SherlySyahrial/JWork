@@ -49,37 +49,18 @@ public class BankPayment extends Invoice
 
         else
         {
-            super.totalFee = super.getJobs().getFee();
-        }
-    }
-
-    public void setAdminFee(int adminFee) {
-        this.adminFee = adminFee;
-    }
-    /** memperbarui total fee berdasarkan bonus */
-    public void setTotalFee() {
-        //totalFee = getJob().getFee();
-        if (adminFee != 0) {
-            totalFee -= adminFee;
+            super.totalFee = super.getJobs().getFee;
         }
     }
 
     public String toString()
     {
-        Date date = getDate().getTime();
-        String strDate = "";
-        if (date != null) {
-            SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MMMM-yyyy");
-            strDate = dateFormat.format(date);
-        }
-        String str =    "====== Ewallet Payment ======" +
-                "\nID           : " + getId() +
-                "\nJobs         : " + getJobs() +
-                "\nDate         : " + strDate +
-                "\nSeeker       : " + getJobseeker().getName() +
-                "\nFee : " + totalFee +
-                "\nStatus       : " + getInvoiceStatus().toString() +
-                "\nPayment Type : " + PAYMENT_TYPE.toString();
-        return str;
+        return"\n====Invoice====" +
+                "\nID: " + "ID = "+ super.getId() +
+                "\nJobs = "+ super.getJobs() +
+                "\nSeeker = "+ super.getJobseeker().getName() +
+                "\nFee = "+ super.totalFee +
+                "\nStatus = "+ super.getInvoiceStatus().toString()+
+                "\nPayment Type = "+ PAYMENT_TYPE.toString();
     }
 }

@@ -3,7 +3,7 @@ import java.util.ArrayList;
 /**
  *
  * @author Sherly
- * @version (25-03-2021)
+ * @version (10-04-2021)
  */
 public class DatabaseRecruiter
 {
@@ -11,10 +11,9 @@ public class DatabaseRecruiter
     private static ArrayList<Recruiter> RECRUITER_DATABASE;
     private static int lastId = 0;
 
-    /
-            * method untuk menambahkan objek pada database recruiter
+    /* method untuk menambahkan objek pada database recruiter
      * @return nilai false
-        */
+     */
     public static ArrayList<Recruiter> getRecruiterDatabase(){
         return RECRUITER_DATABASE;
     }

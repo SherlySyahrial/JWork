@@ -3,7 +3,7 @@ import java.util.ArrayList;
 /**
  *
  * @author Sherly
- * @version (25-03-2021)
+ * @version (10-04-2021)
  */
 public class DatabaseJob
 {
@@ -11,10 +11,9 @@ public class DatabaseJob
     private static ArrayList<Job> JOB_DATABASE;
     private static int lastId = 0;
 
-    /
-            * getter objek Database Job
+    /* getter objek Database Job
      * @return nilai null
-        */
+    */
 
     public static ArrayList<Job> getJobDatabase(){
         return JOB_DATABASE;
@@ -44,7 +43,7 @@ public class DatabaseJob
         return null;
     }
 
-    public ArrayList<Job> getJobByCategory(JobCategory category){
+    public static ArrayList<Job> getJobByCategory(JobCategory category){
         ArrayList<Job> temp = new ArrayList<>();
         for (int i=0; i < JOB_DATABASE.size(); i++) {
             if(JOB_DATABASE.get(i).getCategory() == category){
