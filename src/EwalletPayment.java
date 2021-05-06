@@ -20,7 +20,7 @@ public class EwalletPayment extends Invoice
 
     public EwalletPayment(int id, ArrayList<Job> jobs, Jobseeker jobseeker, Bonus bonus){
         super(id, jobs, jobseeker);
-        this.setBonus(bonus);
+        this.bonus = bonus;
     }
 
     @Override

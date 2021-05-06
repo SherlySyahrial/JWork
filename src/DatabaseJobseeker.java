@@ -15,26 +15,36 @@ public class DatabaseJobseeker
         return JOBSEEKER_DATABASE;
     }
 
-    public static int getLastId(){
+    public static int getLastId() {
         return lastId;
     }
 
-    public static Jobseeker getJobseekerById(int id){
-        for (int i=0; i < JOBSEEKER_DATABASE.size(); i++) {
-            if(JOBSEEKER_DATABASE.get(i).getId() == id){
-                return JOBSEEKER_DATABASE.get(i);
+    public static Jobseeker getJobseekerById(int id) throws JobSeekerNotFoundException {
+        Jobseeker temp = null;
+        try
+        {
+            for (Jobseeker jobseeker : JOBSEEKER_DATABASE)
+            {
+                if (id == jobseeker.getId())
+                {
+                    temp = jobseeker;
+                }
             }
         }
-        return null;
+        catch (Exception e)
+        {
+            throw new JobSeekerNotFoundException(id);
+        }
+        return temp;
     }
     /* method untuk menambahkan objek database job
      * @return nilai false
      */
-    public static boolean addJobseeker(Jobseeker jobseeker) {
-        for (Jobseeker js : JOBSEEKER_DATABASE)
-        {
-            if (js.getId() == jobseeker.getId()) return false;
-            if (js.getEmail() == jobseeker.getEmail()) return false;
+    public static boolean addJobseeker(Jobseeker jobseeker) throws EmailAlreadyExistsException {
+        for (Jobseeker js : JOBSEEKER_DATABASE) {
+            if (jobseeker.getEmail() == js.getEmail()) {
+                throw new EmailAlreadyExistsException(jobseeker);
+            }
         }
         JOBSEEKER_DATABASE.add(jobseeker);
         lastId = jobseeker.getId();
@@ -45,14 +55,17 @@ public class DatabaseJobseeker
      * method untuk menghapus objek database job
      * @return nilai false
      */
-    public static boolean removeJobseeker(int id){
-        for (int i=0; i < JOBSEEKER_DATABASE.size(); i++) {
-            if(JOBSEEKER_DATABASE.get(i).getId() == id) {
-                JOBSEEKER_DATABASE.remove(i);
-                return true;
+    public static Jobseeker removeJobseeker(int id) throws JobSeekerNotFoundException {
+        Jobseeker temp = null;
+        try {
+            for (Jobseeker jobseeker : JOBSEEKER_DATABASE) {
+                if (id == jobseeker.getId()) {
+                    temp = jobseeker;
+                }
             }
+        } catch (Exception e) {
+            throw new JobSeekerNotFoundException(id);
         }
-        return false;
+        return temp;
     }
-
 }

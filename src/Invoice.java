@@ -106,11 +106,11 @@ public abstract class Invoice {
      * @param date
      */
     public void setDate(Calendar date){
-        this.date = date;
+        this.date = Calendar.getInstance();
     }
 
-    public void setDate(int year, int month, int dayOfMonth, int Calendar){
-        this.date = new GregorianCalendar(year, month-1, dayOfMonth);
+    public void setDate(int year, int month, int dayOfMonth){
+        this.date = new GregorianCalendar(year, month, dayOfMonth);
     }
 
     /**
@@ -127,14 +127,8 @@ public abstract class Invoice {
         this.jobseeker = jobseeker;
     }
 
-
-    public void setPaymentType(PaymentType paymentType){
-        this.paymentType = paymentType;
-    }
-
-
     public void setInvoiceStatus(InvoiceStatus status){
-        this.invoiceStatus = invoiceStatus;
+        this.invoiceStatus = invoiceStatus.OnGoing;
     }
     /**
      * method printData
