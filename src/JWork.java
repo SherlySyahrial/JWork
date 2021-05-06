@@ -1,10 +1,9 @@
 import java.util.ArrayList;
 
 /**
- * Write a description of class JWork here.
  *
- * @author (Yogie Wisesa)
- * @version (a version number or a date)
+ * @author Sherly
+ * @version (10-04-2021)
  */
 public class JWork
 {
