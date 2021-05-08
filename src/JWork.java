@@ -19,7 +19,7 @@ public class JWork
             {
                 try {
                     DatabaseJobseeker.addJobseeker(j);
-                } catch (EmailAlreadyExistException e) {
+                } catch (EmailAlreadyExistsException e) {
                     System.out.println(e.getMessage());
                 }
             }

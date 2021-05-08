@@ -18,13 +18,23 @@ public class DatabaseInvoice {
         return lastId;
     }
 
-    public static Invoice getInvoiceById(int id){
-        for (int i=0; i < INVOICE_DATABASE.size(); i++) {
-            if(INVOICE_DATABASE.get(i).getId()== id){
-                return INVOICE_DATABASE.get(i);
+    public static Invoice getInvoiceById(int id)throws InvoiceNotFoundException {
+        Invoice temp = null;
+        try
+        {
+            for (Invoice invoice : INVOICE_DATABASE)
+            {
+                if (id == invoice.getId())
+                {
+                    temp = invoice;
+                }
             }
         }
-        return null;
+        catch (Exception e)
+        {
+            throw new InvoiceNotFoundException(id);
+        }
+        return temp;
     }
 
     public static ArrayList<Invoice> getInvoiceByJobseeker(int jobseekerId){
@@ -38,17 +48,18 @@ public class DatabaseInvoice {
         return null;
     }
 
-    public static boolean addInvoice(Invoice invoice){
-        //Loop for Checking the input
-        for (Invoice listInvoice : INVOICE_DATABASE) {
-            if (invoice.getJobseeker().equals(listInvoice.getJobseeker()) && invoice.getInvoiceStatus() == InvoiceStatus.OnGoing) {
-                return false;
+    public static boolean addInvoice(Invoice invoice) throws OngoingInvoiceAlreadyExistsException {
+        for(Invoice invoice : INVOICE_DATABASE) {
+            if(invoice.getOngoingInvoice() == invoice.getOngoingInvoice()) {
+                throw new OngoingInvoiceAlreadyExistsException (invoice);
             }
         }
+
         INVOICE_DATABASE.add(invoice);
         lastId = invoice.getId();
         return true;
     }
+
 
     public static boolean changeInvoiceStatus(int id, InvoiceStatus invoiceStatus){
         //Looping for Checking the input
@@ -61,14 +72,17 @@ public class DatabaseInvoice {
         return false;
     }
 
-    public static boolean removeInvoice(int id){
-        for (int i=0; i < INVOICE_DATABASE.size(); i++) {
-            if(INVOICE_DATABASE.get(i).getId() == id) {
-                INVOICE_DATABASE.remove(i);
+    public static boolean removeInvoice(int id) throws InvoiceNotFoundException
+    {
+        for (Invoice invoice : INVOICE_DATABASE)
+        {
+            if (invoice.getId() == id)
+            {
+                INVOICE_DATABASE.remove(invoice);
                 return true;
             }
         }
-        return false;
+        throw new InvoiceNotFoundException(id);
     }
 
 }
