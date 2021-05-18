@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="97b4b38b-f768-4b75-a9f2-e88466d4c10b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jwork.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jwork/BankPayment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jwork/Bonus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jwork/EwalletPayment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jwork/Invoice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jwork/InvoiceStatus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jwork/Job.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jwork/JobCategory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jwork/Jobseeker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jwork/Location.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jwork/PaymentType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jwork/Recruiter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BankPayment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bonus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BonusNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DatabaseBonus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DatabaseInvoice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DatabaseJob.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DatabaseJobseeker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DatabaseRecruiter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EmailAlreadyExistsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EwalletPayment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FeeCalculator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Invoice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InvoiceNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InvoiceStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JWork.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Job.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JobCategory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JobNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JobSeekerNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Jobseeker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Location.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OngoingInvoiceAlreadyExistsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaymentType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Recruiter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RecruiterNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReferralCodeAlreadyExistsException.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1siJHc6t2q9XGj6LGWTWOfQMd43" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="97b4b38b-f768-4b75-a9f2-e88466d4c10b" name="Default Changelist" comment="" />
+      <created>1621349392560</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1621349392560</updated>
+    </task>
+    <servers />
+  </component>
+</project>
