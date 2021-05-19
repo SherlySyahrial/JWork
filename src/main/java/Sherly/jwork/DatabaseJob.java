@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class DatabaseJob
 {
     // Mendefinisikan variabel
-    private static ArrayList<Job> JOB_DATABASE;
+    private static ArrayList<Job> JOB_DATABASE=new ArrayList<Job>();
     private static int lastId = 0;
 
     /* getter objek Database Job

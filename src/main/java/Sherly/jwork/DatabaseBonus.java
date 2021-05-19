@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class DatabaseBonus
 {
     // Mendefinisikan variabel
-    private static ArrayList<Bonus> BONUS_DATABASE;
+    private static ArrayList<Bonus> BONUS_DATABASE = new ArrayList<Bonus>();
     private static int lastId;
 
 
