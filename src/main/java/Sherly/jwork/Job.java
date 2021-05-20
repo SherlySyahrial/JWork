@@ -1,27 +1,28 @@
 /**
  *
  * @author Sherly
- * @version (25-03-2021)
+ * @version (10-04-2021)
  */
+
 package Sherly.jwork;
 public class Job
 {
     /**
      deklarasi variabel
-    */
+     */
     private int id; //deklarasi variabel int
     private int fee; //deklarasi variabel int
     private String name;//deklarasi variabel String
-    public Recruiter recruiter;
-    public JobCategory category;
-    
+    private Recruiter recruiter;
+    private JobCategory category;
+
     /**
      * constructor dari job
      * @param id dari job
-     * @param nama dari job
-     * @param perekrut dari recruiter
      * @param fee dari job
-     * @param kategori dari job
+     * @param name dari job
+     * @param category dari job
+     * @param recruiter dari recruiter
      */
     public Job(int id, int fee, String name, JobCategory category, Recruiter recruiter)
     {
@@ -31,106 +32,107 @@ public class Job
         this.category = category;
         this.recruiter = recruiter;
     }
-    
+
     /**
-    * getter id dari jobseeker
-    * @return id dari jobseeker
-    */
-   public int getId()
+     * getter id dari jobseeker
+     * @return id dari jobseeker
+     */
+    public int getId()
     {
         return id;
     }
 
     /**
-    * getter fee jobseeker
-    * @return fee jobseeker
-    */
-   public int getFee()
+     * getter fee jobseeker
+     * @return fee jobseeker
+     */
+    public int getFee()
     {
         return fee;
     }
-    
+
     /**
-    * getter nama jobseeker
-    * @return name jobseeker
-    */
-   public String getName()
+     * getter nama jobseeker
+     * @return name jobseeker
+     */
+    public String getName()
     {
         return name;
     }
 
     /**
-    * getter kategori jobseeker
-    * @return category jobseeker
-    */
-   public JobCategory getCategory()
+     * getter kategori jobseeker
+     * @return category jobseeker
+     */
+    public JobCategory getCategory()
     {
         return category;
     }
-    
+
     /**
-    * setter rekruiter dari recruiter
-    * @param recruiter dari recruiter
-    */
-   public Recruiter getRecruiter()
+     * setter recruiter dari recruiter
+     */
+    public Recruiter getRecruiter()
     {
         return recruiter;
     }
-    
+
     /**
-    * setter id invoice
-    * @param id invoice
-    */    
-   public void setId(int id)
+     * setter id invoice
+     * @param id invoice
+     */
+    public void setId(int id)
     {
         this.id = id;
     }
-    
+
     /**
-    * setter nama invoice
-    * @param name invoice
-    */
-   public void setName(String name)
+     * setter nama invoice
+     * @param name invoice
+     */
+    public void setName(String name)
     {
         this.name = name;
     }
-    
+
     /**
-    * setter kategori invoice
-    * @param category invoice
-    */
-   public void setCategory(JobCategory category)
+     * setter kategori invoice
+     * @param category invoice
+     */
+    public void setCategory(JobCategory category)
     {
         this.category = category;
     }
-    
+
     /**
-    * setter fee invoice
-    * @param fee invoice
-    */
-   public void setFee(int fee)
+     * setter fee invoice
+     * @param fee invoice
+     */
+    public void setFee(int fee)
     {
         this.fee = fee;
     }
-    
+
     /**
-    * setter rekruiter invoice
-    * @param recruiter invoice
-    */
-   public void setRecruiter(Recruiter recruiter)
+     * setter rekruiter invoice
+     * @param recruiter invoice
+     */
+    public void setRecruiter(Recruiter recruiter)
     {
         this.recruiter = recruiter;
     }
-    
+
     /**
-     * Menampilkan nama pekerjaan
+     * menampilkan hasil 
      */
-     public String toString(){ 
-        return "====Job===="+
-               "\nId = " + id +
-                "\nName = " + name +
-                "\nRecruiter = " + recruiter.getName() +
-                "\nCity= " + recruiter.getLocation().getCity() +
-                "\nCategory = " + category.toString();
+    public String toString()
+    {
+        return"\n====Job====" +
+                "\nID: " + id +
+                "\nName: " + name +
+                "\nRecruiter: " + recruiter.getName() +
+                "\nCity: " + recruiter.getLocation().getCity() +
+                "\nFee: " + fee +
+                "\nCategory" + category.toString();
     }
 }

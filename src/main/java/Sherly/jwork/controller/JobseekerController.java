@@ -24,10 +24,10 @@ public class JobseekerController {
         return jobseeker;
     }
 
-    @RequestMapping(value = "", method = RequestMethod.POST)
-    public Jobseeker addJobseeker(@RequestParam(value="name") String name,
-                                  @RequestParam(value="email") String email,
-                                  @RequestParam(value="password") String password)
+    @RequestMapping(value = "/{Register}", method = RequestMethod.POST)
+    public Jobseeker registerJobseeker(@RequestParam(value="name") String name,
+                                       @RequestParam(value="email") String email,
+                                       @RequestParam(value="password") String password)
     {
         Jobseeker jobseeker = new Jobseeker(DatabaseJobseeker.getLastId()+1, name, email, password);
         try {
@@ -38,4 +38,11 @@ public class JobseekerController {
         }
         return jobseeker;
     }
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    public Jobseeker loginJobseeker(@RequestParam(value="email") String email,
+                                    @RequestParam(value="password") String password){
+        return(DatabaseJobseeker.jobseekerLogin(email, password));
+    }
+
+
 }

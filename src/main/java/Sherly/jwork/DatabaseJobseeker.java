@@ -69,4 +69,17 @@ public class DatabaseJobseeker
         }
         return temp;
     }
+
+    public static Jobseeker jobseekerLogin(String email, String password)
+    {
+        for (int i=0; i < JOBSEEKER_DATABASE.size(); i++) {
+            if(JOBSEEKER_DATABASE.get(i).getEmail() == email && JOBSEEKER_DATABASE.get(i).getPassword() == password){
+                return JOBSEEKER_DATABASE.get(i);
+            }
+        }
+        return null;
+    }
+
+    public static void registerJobseeker(Jobseeker jobseeker) {
+    }
 }

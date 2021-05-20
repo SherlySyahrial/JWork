@@ -1,49 +1,40 @@
-package Sherly.jwork;
-import java.util.ArrayList;
-
 /**
  *
  * @author Sherly
  * @version (10-04-2021)
  */
+
+package Sherly.jwork;
+import java.util.ArrayList;
 public class DatabaseJob
 {
-    // Mendefinisikan variabel
-    private static ArrayList<Job> JOB_DATABASE=new ArrayList<Job>();
+    /**
+     * deklarasi variabel
+     */
+    private static ArrayList<Job> JOB_DATABASE = new ArrayList<Job>();
     private static int lastId = 0;
 
-    /* getter objek Database Job
-     * @return nilai null
-    */
-
-    public static ArrayList<Job> getJobDatabase(){
+    public static ArrayList<Job> getJobDatabase()
+    {
         return JOB_DATABASE;
     }
 
-    public static int getLastId(){
+    public static int getLastId()
+    {
         return lastId;
     }
 
-    public static Job getJobById(int id) throws JobNotFoundException {
-        Job temp = null;
-        try
-        {
-            for (Job job : JOB_DATABASE)
-            {
-                if (id == job.getId())
-                {
-                    temp = job;
-                }
+    public static Job getJobById(int id) throws JobNotFoundException
+    {
+        for (int i=0; i < JOB_DATABASE.size(); i++) {
+            if(JOB_DATABASE.get(i).getId() == id){
+                return JOB_DATABASE.get(i);
             }
         }
-        catch (Exception e)
-        {
-            throw new JobNotFoundException(id);
-        }
-        return temp;
+        throw new JobNotFoundException(id);
     }
 
-    public ArrayList<Job> getJobByRecruiter(int recruiterId){
+    public static ArrayList<Job> getJobByRecruiter(int recruiterId){
         ArrayList<Job> temp = new ArrayList<>();
         for (int i=0; i < JOB_DATABASE.size(); i++) {
             if(JOB_DATABASE.get(i).getRecruiter().getId() == recruiterId){
@@ -65,19 +56,26 @@ public class DatabaseJob
         return null;
     }
 
-    public static boolean addJob(Job job){
+    /**
+     * metode addJob dari DatabaseJob
+     * @return false
+     */
+    public static boolean addJob(Job job)
+    {
         JOB_DATABASE.add(job);
         lastId = job.getId();
         return true;
     }
 
+    /**
+     * metode Removejob dari DatabaseJob
+     * @return false
+     */
     public static boolean removeJob(int id) throws JobNotFoundException
     {
-        for (Job job : JOB_DATABASE)
-        {
-            if (job.getId() == id)
-            {
-                JOB_DATABASE.remove(job);
+        for (int i=0; i < JOB_DATABASE.size(); i++) {
+            if(JOB_DATABASE.get(i).getId() == id) {
+                JOB_DATABASE.remove(i);
                 return true;
             }
         }
