@@ -9,7 +9,7 @@ public class BonusNotFoundException extends Exception {
     public BonusNotFoundException (int bonus_input) {
         super ("Bonus ID: ");
     }
-    public String getMassage() {
+    public String getMessage() {
         return super.getMessage() + bonus_error + "not found";
     }
 }
