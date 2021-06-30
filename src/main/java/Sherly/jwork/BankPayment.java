@@ -1,8 +1,10 @@
+
 /**
  *
  * @author Sherly
  * @version (10-04-2021)
  */
+
 package Sherly.jwork;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -44,38 +46,33 @@ public class BankPayment extends Invoice
     @Override
     public void setTotalFee()
     {
-       int totalJobFee = 0;
-       for (int i=0; i<getJobs().size();i++){
-           totalJobFee = totalJobFee + getJobs().get(i).getFee();
-       }
-       if (getAdminFee() != 0){
-           this.totalFee = (totalJobFee + getAdminFee());
-       }
-       else {
-           this.totalFee = totalJobFee;
-       }
+        for(Job job : getJobs()) {
+            if(adminFee != 0) {
+                totalFee = job.getFee() - getAdminFee();
+            }
+            else {
+                totalFee = job.getFee();
+            }
+        }
     }
 
     public String toString()
     {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MMMM-yyyy");
-        String date = dateFormat.format(getDate().getTime());
+        SimpleDateFormat format1 = new SimpleDateFormat("dd MMMM yyyy");
+        String date1 = format1.format(getDate().getTime());
         String jobIn = "";
         for(int i=0; i<getJobs().size();i++){
             jobIn = jobIn + getJobs().get(i).getName() + " ";
         }
-        return "\n==============INVOICE===============\n" +
+
+        return "\n================INVOICE================\n" +
                 "ID: " + getId() +
                 "\nJob: " + jobIn +
+                "\nDate: " + date1 +
                 "\nJobseeker: " + getJobseeker().getName() +
                 "\nAdmin Fee: " + getAdminFee() +
                 "\nTotal Fee: " + totalFee +
                 "\nStatus: " + getInvoiceStatus() +
                 "\nPayment Type: " + getPaymentType();
-    }
-
-    @Override
-    public int getOngoingInvoice() {
-        return 0;
     }
 }

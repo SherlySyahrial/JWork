@@ -29,13 +29,16 @@ public class DatabaseBonus
      * getter objek Database Job
      * @return nilai null
      */
-    public static Bonus getBonusById(int id){
-        for (int i=0; i < BONUS_DATABASE.size(); i++) {
-            if(BONUS_DATABASE.get(i).getId()== id){
+    public static  Bonus getBonusById(int id) throws BonusNotFoundException{
+        boolean checker = false;
+        for(int i=0;i<BONUS_DATABASE.size();i++){
+            if(BONUS_DATABASE.get(i).getId() == id){
+                checker = true;
                 return BONUS_DATABASE.get(i);
             }
         }
-        return null;
+        //Throw disini
+        throw new BonusNotFoundException(id);
     }
 
     public static Bonus getBonusByReferralCode(String referralCode){
@@ -77,22 +80,13 @@ public class DatabaseBonus
      * method untuk menghapus objek database job
      * @return nilai false
      */
-    public static Bonus removeBonus(int id) throws BonusNotFoundException {
-        Bonus temp = null;
-        try
-        {
-            for (Bonus bonus : BONUS_DATABASE)
-            {
-                if (id == bonus.getId())
-                {
-                    temp = bonus;
-                }
-            }
+    public boolean removeBonus (int id) throws BonusNotFoundException{
+        Bonus bonus = BONUS_DATABASE.get(id);
+        if (bonus != null) {
+            BONUS_DATABASE.remove(bonus);
+            return true;
         }
-        catch (Exception e)
-        {
-            throw new BonusNotFoundException(id);
-        }
-        return temp;
+        //Throw disini
+        throw new BonusNotFoundException(id);
     }
 }

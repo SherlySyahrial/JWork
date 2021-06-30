@@ -73,7 +73,7 @@ public class DatabaseJobseeker
     public static Jobseeker jobseekerLogin(String email, String password)
     {
         for (int i=0; i < JOBSEEKER_DATABASE.size(); i++) {
-            if(JOBSEEKER_DATABASE.get(i).getEmail() == email && JOBSEEKER_DATABASE.get(i).getPassword() == password){
+            if(JOBSEEKER_DATABASE.get(i).getEmail().equals(email) && JOBSEEKER_DATABASE.get(i).getPassword().equals(password)){
                 return JOBSEEKER_DATABASE.get(i);
             }
         }

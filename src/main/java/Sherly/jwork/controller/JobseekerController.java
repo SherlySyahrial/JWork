@@ -31,7 +31,9 @@ public class JobseekerController {
     {
         Jobseeker jobseeker = new Jobseeker(DatabaseJobseeker.getLastId()+1, name, email, password);
         try {
+            if (jobseeker.getEmail().isEmpty() || jobseeker.getPassword().isEmpty()) return null;
             DatabaseJobseeker.addJobseeker(jobseeker);
+
         } catch (EmailAlreadyExistsException e) {
             e.getMessage();
             return null;

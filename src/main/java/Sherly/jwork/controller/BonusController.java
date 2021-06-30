@@ -2,12 +2,12 @@ package Sherly.jwork.controller;
 
 import Sherly.jwork.*;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.ArrayList;
 
 @RequestMapping("/bonus")
 @RestController
 public class BonusController {
+
     @RequestMapping(value = "", method = RequestMethod.GET)
     public ArrayList<Bonus> getAllBonus() {
         return DatabaseBonus.getBonusDatabase();

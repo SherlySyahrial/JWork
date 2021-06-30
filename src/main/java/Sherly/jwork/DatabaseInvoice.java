@@ -51,7 +51,7 @@ public class DatabaseInvoice {
 
     public static boolean addInvoice(Invoice invoice) throws OngoingInvoiceAlreadyExistsException {
         for(Invoice invoices : INVOICE_DATABASE) {
-            if (invoices.getOngoingInvoice() == invoice.getOngoingInvoice())
+            if (invoices.getInvoiceStatus().equals(InvoiceStatus.OnGoing))
                 throw new OngoingInvoiceAlreadyExistsException (invoice);
         }
 
