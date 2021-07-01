@@ -8,18 +8,32 @@ import java.util.ArrayList;
  */
 public class DatabaseJobseeker
 {
-    // Mendefinisikan variabel
+    /** Mendefinisikan variabel */
     private static ArrayList<Jobseeker> JOBSEEKER_DATABASE=new ArrayList<Jobseeker>();
     private static int lastId = 0;
 
+    /**
+     * method getter database jobseeker
+     * @return seluruh database jobseeker
+     */
     public static ArrayList<Jobseeker> getDatabaseJobseeker(){
         return JOBSEEKER_DATABASE;
     }
 
+    /**
+     * method getter id jobseeker terakhir
+     * @return id jobseeker terakhir
+     */
     public static int getLastId() {
         return lastId;
     }
 
+    /**
+     * method getter jobseeker menggunakanid
+     * @param id
+     * @return jobseeker yang dicari
+     * @throws JobSeekerNotFoundException
+     */
     public static Jobseeker getJobseekerById(int id) throws JobSeekerNotFoundException {
         Jobseeker temp = null;
         try
@@ -38,8 +52,10 @@ public class DatabaseJobseeker
         }
         return temp;
     }
-    /* method untuk menambahkan objek database job
-     * @return nilai false
+    /**
+     * method untuk menambah jobseeker baru
+     * @param jobseeker
+     * @return true jika berhasil ditambah
      */
     public static boolean addJobseeker(Jobseeker jobseeker) throws EmailAlreadyExistsException {
         for (Jobseeker js : JOBSEEKER_DATABASE) {
@@ -70,6 +86,12 @@ public class DatabaseJobseeker
         return temp;
     }
 
+    /**
+     * method untuk login jobseeker
+     * @param email
+     * @param password
+     * @return jobseeker yang baru login
+     */
     public static Jobseeker jobseekerLogin(String email, String password)
     {
         for (int i=0; i < JOBSEEKER_DATABASE.size(); i++) {

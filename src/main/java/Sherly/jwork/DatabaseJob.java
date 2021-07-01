@@ -14,6 +14,11 @@ public class DatabaseJob
     private static ArrayList<Job> JOB_DATABASE = new ArrayList<Job>();
     private static int lastId = 0;
 
+    /**
+     * getter detail pekerjaan
+     *
+     * @return null
+     */
     public static ArrayList<Job> getJobDatabase()
     {
         return JOB_DATABASE;

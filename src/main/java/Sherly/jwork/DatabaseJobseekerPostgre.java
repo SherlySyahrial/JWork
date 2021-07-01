@@ -20,6 +20,11 @@ public class DatabaseJobseekerPostgre {
     private static Connection c = null;
     private static Statement stmt = null;
 
+    /**
+     * Insert Jobseeker
+     * @param jobseeker
+     * @return Jobseeker
+     */
     public static Jobseeker addJobseeker(Jobseeker jobseeker) {
         c = DatabaseConnection.connection();
         try {
@@ -49,6 +54,10 @@ public class DatabaseJobseekerPostgre {
         return jobseeker;
     }
 
+    /**
+     * Get last Jobseeker
+     * @return Jobseeker
+     */
     public static int getLastId() {
         int value = 0;
         c = DatabaseConnection.connection();
@@ -68,6 +77,11 @@ public class DatabaseJobseekerPostgre {
         return value;
     }
 
+    /**
+     * Get Jobseeker by id
+     * @param id Jobseeker id
+     * @return Jobseeker
+     */
     public static Jobseeker getJobseekerById(int id) {
         Jobseeker value = null;
         c = DatabaseConnection.connection();
@@ -93,6 +107,11 @@ public class DatabaseJobseekerPostgre {
         return value;
     }
 
+    /**
+     * Remove Jobseeker boolean.
+     * @param id the id
+     * @return the boolean
+     */
     public static boolean removeJobseeker(int id) {
         c = DatabaseConnection.connection();
         try {
@@ -108,6 +127,12 @@ public class DatabaseJobseekerPostgre {
         return true;
     }
 
+    /**
+     * method untuk login jobseeker
+     * @param emailInput
+     * @param passwordInput
+     * @return jobseeker yang baru login
+     */
     public static Jobseeker getJobseekerLogin(String emailInput, String passwordInput) {
         Jobseeker value = null;
         Connection c = DatabaseConnection.connection();
@@ -135,6 +160,10 @@ public class DatabaseJobseekerPostgre {
         return value;
     }
 
+    /**
+     * Get Jobseeker database
+     * @return JOBSEEKER
+     */
     public static ArrayList<Jobseeker> getJobseekerDatabase() {
         ArrayList<Jobseeker> jobseekers = new ArrayList<>();
         Jobseeker value = null;

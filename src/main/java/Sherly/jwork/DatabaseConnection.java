@@ -9,6 +9,10 @@ package Sherly.jwork;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
+/**
+ * method connection untuk menginisiasi koneksi
+ * @return data koneksi ke postgre
+ */
 public class DatabaseConnection {
     public static Connection connection() {
         Connection c = null;

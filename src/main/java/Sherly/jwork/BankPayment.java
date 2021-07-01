@@ -21,28 +21,50 @@ public class BankPayment extends Invoice
         super(id, jobs, jobseeker);
     }
 
+    /**
+     * constructor bank payment dengan admin fee
+     * @param id
+     * @param jobs
+     * @param jobseeker
+     * @param adminFee
+     */
     public BankPayment(int id, ArrayList<Job> jobs, Jobseeker jobseeker, int adminFee)
     {
         super(id, jobs, jobseeker);
         this.adminFee = adminFee;
     }
 
+    /**
+     * method getter payment type
+     * @return PAYMENT_TYPE
+     */
     @Override
     public PaymentType getPaymentType()
     {
         return PAYMENT_TYPE;
     }
 
+    /**
+     * method getter admin fee
+     * @return admin fee
+     */
     public int getAdminFee()
     {
         return adminFee;
     }
 
+    /**
+     * method setter admin fee
+     * @param adminFee
+     */
     public void setAdminFee(int adminFee)
     {
         this.adminFee = adminFee;
     }
 
+    /**
+     * method setter totalfee untuk menghitung total gaji
+     */
     @Override
     public void setTotalFee()
     {
@@ -56,6 +78,9 @@ public class BankPayment extends Invoice
         }
     }
 
+    /**
+     * method toString untuk print hasil
+     */
     public String toString()
     {
         SimpleDateFormat format1 = new SimpleDateFormat("dd MMMM yyyy");

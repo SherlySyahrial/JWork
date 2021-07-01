@@ -41,6 +41,11 @@ public class DatabaseBonus
         throw new BonusNotFoundException(id);
     }
 
+    /**
+     * method getter bonus menggunkaan referral code
+     * @param referralCode
+     * @return bonus dengan referral code tersebut
+     */
     public static Bonus getBonusByReferralCode(String referralCode){
         for (int i=0; i < BONUS_DATABASE.size(); i++) {
             if(BONUS_DATABASE.get(i).getReferralCode()== referralCode){
@@ -66,6 +71,11 @@ public class DatabaseBonus
         return true;
     }
 
+    /**
+     * method untuk menonaktifkan bonus
+     * @param id
+     * @return true jika tidak aktif, false jika aktif
+     */
     public static boolean deactivateBonus(int id){
         for (int i = 0; i < BONUS_DATABASE.size(); i++) {
             if (BONUS_DATABASE.get(i).getId() == id) {

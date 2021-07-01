@@ -7,6 +7,9 @@ import java.util.ArrayList;
  */
 public class FeeCalculator implements Runnable{
 
+    /**
+     * method run untuk menjalankan fungsi penghitungan
+     */
     public void run(){
         ArrayList<Invoice> list = DatabaseInvoice.getInvoiceDatabase();
         for (Invoice i : list){
